@@ -55,7 +55,6 @@ ufw allow from 10.0.0.0/8
 
 ufw -f default deny incoming
 ufw -f default allow outgoing
-ufw -f default allow forward
 ufw -f enable
 
 cat <<EOF >> /etc/crontab
