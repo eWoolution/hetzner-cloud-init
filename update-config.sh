@@ -51,7 +51,7 @@ declare -p REMOVED
 for IP in "${REMOVED[@]}"; do
   ufw deny from "$IP"
 done
-
+ ufw -f default allow forward
 FLOATING_IPS=${FLOATING_IPS:-"0"}
 
 if [ "$FLOATING_IPS" == "1" ]; then
